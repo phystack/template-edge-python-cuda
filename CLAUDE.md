@@ -1,7 +1,7 @@
 # CLAUDE.md — template-edge-python-cuda
 
 Starter template for PhyStack **EDGE** apps that need **GPU / CUDA**:
-Python apps built on the shared `phygrid/cuda-base` image that run on PhyOS
+Python apps built on the shared `phystack/cuda-base` image that run on PhyOS
 devices and talk to the platform through `phystack-hub-client` (an Edge
 twin). Scaffolded by `phy app init <name> --type edge --lang python-cuda`.
 
@@ -22,7 +22,7 @@ container (that happens in `pub` via the CLI).
 
 ## The CUDA base image — per-arch reality
 
-`FROM phygrid/cuda-base:<tag>` is one multi-arch tag with a different NVIDIA
+`FROM phystack/cuda-base:<tag>` is one multi-arch tag with a different NVIDIA
 base per arch (see https://github.com/phystack/cuda-base):
 
 - **amd64** — nvidia/cuda **12.9** runtime, Ubuntu 24.04, Python 3.12.
@@ -76,7 +76,7 @@ Rust `phy` CLI only.
 | `src/schema.ts` | Installation-settings schema source (→ `build/schema.json` + `meta-schema.json`) |
 | `requirements.txt` | Python runtime dependencies (`phystack-hub-client`) |
 | `settings.json` | Docker `createOptions` (HostConfig) attached to the build — includes the nvidia GPU `DeviceRequests` |
-| `Dockerfile` | GPU runtime image (`FROM phygrid/cuda-base`) |
+| `Dockerfile` | GPU runtime image (`FROM phystack/cuda-base`) |
 | `scripts/init-settings.js` | Generates local dev settings from schema defaults |
 
 ## Gotchas
@@ -88,5 +88,5 @@ Rust `phy` CLI only.
 - Keep this template in step with `template-edge-python` — only the runtime
   image (cuda-base vs python:slim) and the GPU grant in `settings.json`
   differ.
-- Pin the `phygrid/cuda-base` tag in the Dockerfile and bump deliberately;
+- Pin the `phystack/cuda-base` tag in the Dockerfile and bump deliberately;
   its CI auto-increments patch versions.

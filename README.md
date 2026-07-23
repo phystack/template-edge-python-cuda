@@ -1,18 +1,18 @@
 # template-edge-python-cuda
 
 Starter template for PhyStack **EDGE** apps that need **GPU / CUDA** — Python
-apps on the shared [`phygrid/cuda-base`](https://github.com/phystack/cuda-base)
+apps on the shared [`phystack/cuda-base`](https://github.com/phystack/cuda-base)
 image, running on PhyOS devices. Scaffolded by the PhyStack CLI
 (`phy app init --type edge --lang python-cuda`) or usable directly.
 
 Identical to [`template-edge-python`](https://github.com/phystack/template-edge-python)
 except the runtime image: instead of `python:slim`, apps build on
-`phygrid/cuda-base`, and the container is granted GPU access via
+`phystack/cuda-base`, and the container is granted GPU access via
 `DeviceRequests` in `settings.json`.
 
 ## The base image (per-arch)
 
-`phygrid/cuda-base` is one multi-arch tag with a different NVIDIA base per arch:
+`phystack/cuda-base` is one multi-arch tag with a different NVIDIA base per arch:
 
 | | amd64 | arm64 (Jetson) |
 |---|---|---|
@@ -78,5 +78,5 @@ attached automatically, and the build is published as soon as it processes.
 | `src/schema.ts` | Installation-settings schema (TypeScript is used only for schema authoring) |
 | `requirements.txt` | Python runtime dependencies (`phystack-hub-client`) |
 | `settings.json` | Docker `createOptions` attached to the build — includes the nvidia `DeviceRequests` GPU grant |
-| `Dockerfile` | GPU runtime image (`FROM phygrid/cuda-base`) |
+| `Dockerfile` | GPU runtime image (`FROM phystack/cuda-base`) |
 | `scripts/init-settings.js` | Generates local dev settings from schema defaults |

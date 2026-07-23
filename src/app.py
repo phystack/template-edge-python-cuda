@@ -3,7 +3,7 @@
 PhyStack Edge App Template (CUDA)
 
 This template demonstrates how to create a GPU-capable Python edge app
-using the phystack-hub-client package on the phygrid/cuda-base image.
+using the phystack-hub-client package on the phystack/cuda-base image.
 """
 
 import asyncio

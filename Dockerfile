@@ -1,12 +1,12 @@
 # PhyStack CUDA edge app — built on the shared GPU base image.
-# phygrid/cuda-base is multi-arch with a per-arch NVIDIA base:
+# phystack/cuda-base is multi-arch with a per-arch NVIDIA base:
 #   amd64 -> nvidia/cuda 12.9 runtime (Ubuntu 24.04, Python 3.12;
 #            TensorRT + cuDNN + NVENC FFmpeg/PyAV baked in)
 #   arm64 -> nvcr.io/nvidia/l4t-cuda 12.6 runtime (Jetson / L4T r36,
 #            Ubuntu 22.04, Python 3.10 — cuDNN/TensorRT NOT bundled;
 #            add them from the NVIDIA Jetson apt repos if needed)
 # Pin the tag and bump deliberately; see https://github.com/phystack/cuda-base
-FROM phygrid/cuda-base:v1.1.0
+FROM phystack/cuda-base:v1.1.0
 
 WORKDIR /app/
 
