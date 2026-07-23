@@ -1,0 +1,26 @@
+{
+  "HostConfig": {
+    "NetworkMode": "bridge",
+    "RestartPolicy": { "Name": "always" },
+    "Privileged": false,
+    "Memory": 0,
+    "CpuShares": 0,
+    "StorageOpt": {},
+    "DiskQuota": 0,
+    "ReadonlyRootfs": false,
+    "BlkioWeight": 0,
+    "BlkioDeviceReadBps": [],
+    "BlkioDeviceWriteBps": [],
+    "Devices": [],
+    "DeviceRequests": [
+      { "Driver": "nvidia", "Count": -1, "Capabilities": [["gpu"]] }
+    ],
+    "Binds": [],
+    "PortBindings": {},
+    "ExtraHosts": []
+  },
+  "Env": [],
+  "Cmd": null,
+  "WorkingDir": "",
+  "Volumes": null
+}

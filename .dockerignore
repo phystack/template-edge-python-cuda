@@ -1,0 +1,40 @@
+# Git
+.git
+.gitignore
+
+# Node.js (for schema build only)
+node_modules/
+
+# Build artifacts
+build/
+dist/
+*.gridapp
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# IDE
+.idea/
+.vscode/
+
+# Docs
+README.md
+LICENSE
+DESCRIPTION.md
+
+# Meta
+meta/
+
+# Environment
+.env
+.env.*
+
+# Docker
+Dockerfile*
+.dockerignore
+docker-compose*.yml
