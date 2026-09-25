@@ -1,2 +1,2 @@
 # PhyStack edge app dependencies
-phystack-hub-client>=0.2.0
+phystack-hub-client>=6.18.2
